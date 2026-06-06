@@ -1,0 +1,22 @@
+Pipe in to send, pipe out to receive.
+
+Usage:
+  discover [-ciprst]
+
+  -c
+    Number of times to send the broadcast message. Infinite if 0.
+  -i
+    Interval for sending the broadcast message. This defaults to 1 second.
+  -p
+    A code that should be equal between the sender and receiver.
+  -r
+    The receiver sends the broadcast
+  -s
+    The one which sends the broadcast selects a destination through a tty after
+    a timeout
+  -t
+    Sets the timeout for -s. This defaults at 3 seconds.
+
+Example:
+  echo "hello" | discover
+  discover | cat
